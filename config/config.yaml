@@ -19,6 +19,11 @@ test:
   num_workers: 4
   out_dir: "out/"
 
+evaluate:
+  model_dir: "out/resnet_baseline"
+  csv_dir: ${evaluate.model_dir}/csv
+  out_dir: ${evaluate.model_dir}/thresholds
+
 wandb:
   enabled: True
   project: "octopi"
